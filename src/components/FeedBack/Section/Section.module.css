@@ -1,0 +1,16 @@
+h1 {
+  display: block;
+  text-align: center;
+  margin-bottom: 1%;
+  padding: 1%;
+  color: aqua;
+  font-size: 50px;
+}
+h3 {
+  display: block;
+  text-align: center;
+  margin-bottom: 1%;
+  padding: 1%;
+  color: rgb(9, 255, 0);
+  font-size: 70px;
+}

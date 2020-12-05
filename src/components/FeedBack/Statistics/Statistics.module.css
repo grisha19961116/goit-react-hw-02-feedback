@@ -1,0 +1,23 @@
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  align-content: center;
+  text-align: center;
+}
+li {
+  width: 20%;
+  height: 200px;
+  margin-right: 3%;
+  border: solid 4px black;
+  background-color: grey;
+  color: orange;
+  border-radius: 20%;
+  padding-top: 1%;
+  font-size: 60px;
+}
+.span__statistic {
+  color: rgb(229, 233, 12);
+  font-size: 80px;
+}

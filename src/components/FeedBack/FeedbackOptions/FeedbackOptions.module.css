@@ -1,0 +1,22 @@
+.wrapper__btn {
+  margin: 0 auto;
+  width: 80%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn {
+  text-align: center;
+  width: 15%;
+  height: 10%;
+  margin-right: 5%;
+  background-color: greenyellow;
+  color: darkgreen;
+  font-size: 30px;
+  border-radius: 10%;
+  border: solid 5px purple;
+}
+.btn:hover {
+  background-color: orange;
+}
