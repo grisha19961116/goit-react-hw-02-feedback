@@ -13,40 +13,39 @@ class FeedBack extends Component {
     total: 0,
     percentage: 0,
   };
-  countPositiveFeedbackPercentage = () => {
-    this.setState(({ good, neutral, bad }) => {
-      const total = good + neutral + bad;
-      const percent = Math.ceil((100 / total) * good);
-      if (total > 0) {
-        return {
-          percentage: percent,
-          total: total,
-        };
-      }
-    });
+  countPercentage = () => {
+    const { good } = this.state;
+    const total = this.countTotalFeedback();
+    return total ? Math.ceil((100 / total) * good) : 0;
   };
-  countTotalFeedback = ({ target }) => {
+  handleFeedback = ({ target }) => {
     const { name } = target;
     this.setState({
       [name]: this.state[name] + 1,
     });
-    this.countPositiveFeedbackPercentage();
+  };
+  countTotalFeedback = () => {
+    const { good, neutral, bad } = this.state;
+    return good + neutral + bad;
   };
   render() {
-    const { good, neutral, bad, total, percentage } = this.state;
+    const { good, neutral, bad } = this.state;
+    const totalFn = this.countTotalFeedback();
+    const percentFn = this.countPercentage();
+    console.log(percentFn);
     return (
       <div className={style.wrapper}>
         <Section title="Please leave feedback" flag={true}>
-          <FeedbackOptions onClick={this.countTotalFeedback} />
+          <FeedbackOptions onClick={this.handleFeedback} />
         </Section>
         <Section title="Statistics" flag={false}>
-          {total > 0 ? (
+          {totalFn > 0 ? (
             <Statistics
               good={good}
               neutral={neutral}
               bad={bad}
-              total={total}
-              percentage={percentage}
+              total={totalFn}
+              percentage={percentFn}
             />
           ) : (
             <Notification />
