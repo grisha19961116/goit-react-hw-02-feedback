@@ -32,7 +32,6 @@ class FeedBack extends Component {
     const { good, neutral, bad } = this.state;
     const totalFn = this.countTotalFeedback();
     const percentFn = this.countPercentage();
-    console.log(percentFn);
     return (
       <div className={style.wrapper}>
         <Section title="Please leave feedback" flag={true}>
