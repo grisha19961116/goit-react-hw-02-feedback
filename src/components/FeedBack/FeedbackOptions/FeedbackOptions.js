@@ -1,4 +1,5 @@
 import style from './FeedbackOptions.module.css';
+import PropTypes from 'prop-types';
 export default function FeedbackOptions({ onClick }) {
   return (
     <div className={style.wrapper__btn}>
@@ -19,3 +20,6 @@ export default function FeedbackOptions({ onClick }) {
     </div>
   );
 }
+FeedbackOptions.propTypes = {
+  onClick: PropTypes.func.isRequired,
+};
