@@ -5,23 +5,23 @@ export default function Statistics({ good, neutral, bad, total, percentage }) {
     <ul>
       <li>
         <span>Good : </span>
-        <span className={style.span__statistic}>{good}</span>
+        <span>{good}</span>
       </li>
       <li>
         <span>Neutral : </span>
-        <span className={style.span__statistic}>{neutral}</span>
+        <span>{neutral}</span>
       </li>
       <li>
         <span>Bad : </span>
-        <span className={style.span__statistic}>{bad}</span>
+        <span>{bad}</span>
       </li>
       <li>
         <span>Total : </span>
-        <span className={style.span__statistic}>{total}</span>
+        <span>{total}</span>
       </li>
       <li>
-        <span>Positive statistic : </span>
-        <span className={style.span__statistic}>{percentage}%</span>
+        <span>Positive : </span>
+        <span>{percentage}%</span>
       </li>
     </ul>
   );

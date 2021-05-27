@@ -3,7 +3,7 @@ h1 {
   text-align: center;
   margin-bottom: 1%;
   padding: 1%;
-  color: aqua;
+  color: rgb(129, 8, 123);
   font-size: 50px;
 }
 h3 {
@@ -11,6 +11,6 @@ h3 {
   text-align: center;
   margin-bottom: 1%;
   padding: 1%;
-  color: rgb(9, 255, 0);
+  color: rgb(129, 8, 123);
   font-size: 70px;
 }

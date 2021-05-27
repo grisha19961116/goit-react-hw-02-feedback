@@ -13,6 +13,10 @@ class FeedBack extends Component {
     total: 0,
     percentage: 0,
   };
+  countTotalFeedback = () => {
+    const { good, neutral, bad } = this.state;
+    return good + neutral + bad;
+  };
   countPercentage = () => {
     const { good } = this.state;
     const total = this.countTotalFeedback();
@@ -24,27 +28,23 @@ class FeedBack extends Component {
       [name]: this.state[name] + 1,
     });
   };
-  countTotalFeedback = () => {
-    const { good, neutral, bad } = this.state;
-    return good + neutral + bad;
-  };
   render() {
     const { good, neutral, bad } = this.state;
-    const totalFn = this.countTotalFeedback();
-    const percentFn = this.countPercentage();
+    const totalFeedback = this.countTotalFeedback();
+    const positivePercent = this.countPercentage();
     return (
       <div className={style.wrapper}>
         <Section title="Please leave feedback" flag={true}>
-          <FeedbackOptions onClick={this.handleFeedback} />
+          <FeedbackOptions listenerOnClick={this.handleFeedback} />
         </Section>
         <Section title="Statistics" flag={false}>
-          {totalFn > 0 ? (
+          {totalFeedback > 0 ? (
             <Statistics
               good={good}
               neutral={neutral}
               bad={bad}
-              total={totalFn}
-              percentage={percentFn}
+              total={totalFeedback}
+              percentage={positivePercent}
             />
           ) : (
             <Notification />

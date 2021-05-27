@@ -1,6 +1,6 @@
 .wrapper {
   width: 100%;
-  min-height: auto;
+  min-height: 100vh;
   background-color: plum;
   padding: 5%;
 }

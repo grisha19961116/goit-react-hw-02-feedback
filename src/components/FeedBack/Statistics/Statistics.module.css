@@ -1,23 +1,16 @@
 ul {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   list-style: none;
   align-content: center;
   text-align: center;
 }
 li {
-  width: 20%;
-  height: 200px;
-  margin-right: 3%;
-  border: solid 4px black;
-  background-color: grey;
-  color: orange;
-  border-radius: 20%;
-  padding-top: 1%;
-  font-size: 60px;
-}
-.span__statistic {
-  color: rgb(229, 233, 12);
-  font-size: 80px;
+  width: 16%;
+  padding: 10px 0;
+  border: solid 4px white;
+  background-color: rgb(113, 13, 170);
+  color: white;
+  font-size: 30px;
 }
